@@ -3,13 +3,13 @@ body {
     margin: 0;
     font-family: 'Georgia', serif;
     background: #eef6fb;
-    overflow-x: hidden;   /* only horizontal scroll बंद */
+    overflow-x: hidden;
 }
 
 /* ===== Header Wrapper ===== */
 .wrapp{
     display:flex;
-    flex-direction: row;   /* PC वर row same */
+    flex-direction: row;   /* PC same */
     padding-top: 10px;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@ body {
 }
 
 .logou{
-    height:125px;   /* PC same */
+    height:125px;
 }
 
 /* ===== College Text ===== */
@@ -34,7 +34,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #970000;
-    font-size: 50px;   /* PC SAME */
+    font-size: 50px;
     padding: 0 30px;
     font-weight: 900;
     text-align: center;
@@ -67,14 +67,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 170px);
+    justify-content: flex-start;  /* center काढलं */
+    padding-top: 15px;
 }
 
 /* ===== Banner Box ===== */
 .banner {
     position: relative;
-    width: 750px;  /* PC SAME */
+    width: 750px;  /* PC same */
     max-width: 90%;
     border-radius: 25px;
     overflow: hidden;
@@ -119,29 +119,22 @@ body {
 .button:hover {
     background: linear-gradient(135deg, #0aa885, #0f766e);
     transform: scale(1.12);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.35);
 }
 
 /* ===== Feedback Button ===== */
 .FEEDU{
     background: linear-gradient(135deg,#cfd9df,#e2a9a1);
-    color: #fff;
-    border: none;
     margin-top: 10px;
     padding: 20px 80px;
     font-size: 24px;
     font-weight: bold;
     border-radius: 35px;
-    cursor: pointer;
-    letter-spacing: 1.2px;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
+    text-align: center;
 }
 
-.FEEDU:hover {
-    background: linear-gradient(135deg, #e2a9a1, #cfd9df);
-    transform: scale(1.12);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+.FEEDU a{
+    text-decoration: none;
+    color: blue;
 }
 
 /* ===== Credit ===== */
@@ -167,40 +160,63 @@ body {
     width:100px;
 }
 
-/* ================= MOBILE ONLY ================= */
-/* ================= MOBILE PERFECT LAYOUT ================= */
-/* ================= MOBILE FIX NO SCROLL ================= */
+/* ================= MOBILE ================= */
 @media (max-width:768px){
-
-    body{
-        overflow-x: hidden;
-    }
 
     .wrapp{
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
-    /* Gap कमी करा */
+    .logou{
+        height: 90px;
+    }
+
+    .text{
+        font-size: 24px;
+        padding: 10px;
+        line-height: 1.3;
+    }
+
+    .stream{
+        font-size: 16px;
+    }
+
+    .auto{
+        font-size: 14px;
+    }
+
     .logo2{
-        margin-bottom: 5px;   /* कमी distance */
+        margin-bottom: 0;
     }
 
     .banner-wrapper{
-        margin-top: 5px;   /* A++ खाली लगेच banner */
-        min-height: auto;  /* full height force करू नका */
+        padding-top: 5px;
     }
 
     .banner{
         width: 95%;
-        margin-top: 0;
+        margin-top: 5px;
     }
 
-    /* Banner image थोडा छोटा करा */
     .banner-img{
-        max-height: 300px;
-        object-fit: cover;
+        max-height: 240px;  /* scroll टाळण्यासाठी */
+        object-fit: contain;
+    }
+
+    .button{
+        font-size: 18px;
+        padding: 15px 40px;
+    }
+
+    .FEEDU{
+        font-size: 18px;
+        padding: 15px 40px;
+    }
+
+    .inim{
+        height: 70px;
+        width: 70px;
     }
 
 }
