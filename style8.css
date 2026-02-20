@@ -1,10 +1,9 @@
 /* ===== Body ===== */
-/* ===== Body ===== */
 body {
     margin: 0;
     font-family: 'Georgia', serif;
     background: #eef6fb;
-    overflow: hidden;   /* Scroll completely बंद */
+    overflow-x: hidden;   /* Only horizontal scroll बंद */
 }
 
 /* ===== Header Wrapper ===== */
@@ -14,6 +13,7 @@ body {
     padding-top: 10px;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* ===== Logo Section ===== */
@@ -35,14 +35,14 @@ body {
     justify-content: center;
     align-items: center;
     color: #970000;
-    font-size: 50px;
+    font-size: clamp(24px,4vw,50px);
     padding: 0 30px;
     font-weight: 900;
     text-align: center;
 }
 
 .stream{
-    font-size: 32px;
+    font-size: clamp(16px,3vw,32px);
     font-weight: 700;
     color: #38137a;
 }
@@ -50,7 +50,7 @@ body {
 .auto{
     color: #3b3b3b;
     display: block;
-    font-size: 22px;
+    font-size: clamp(14px,2.5vw,22px);
     font-weight: 600;
 }
 
@@ -63,13 +63,13 @@ body {
     height:125px;
 }
 
-/* ===== Banner wrapper (Fit Screen Without Scroll) ===== */
+/* ===== Banner wrapper ===== */
 .banner-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 170px); /* Header height adjust */
+    min-height: calc(100vh - 170px);
 }
 
 /* ===== Banner Box ===== */
@@ -165,13 +165,14 @@ body {
 .insta{
     position: fixed;
     bottom: 15px;
-    right: 1px;
+    left: 15px;   /* overlap avoid */
 }
 
 .inim{
-    height:100px;
-    width:100px;
+    height:80px;
+    width:80px;
 }
+
 .GAME{
     margin-top:15px;
     text-align:center;
@@ -189,34 +190,34 @@ body {
     to{ text-shadow:0 0 25px #ff1493,0 0 40px pink; }
 }
 
-
 /* ===== Mobile Responsive ===== */
 @media (max-width:768px){
- 
-    .text{
-        font-size:24px;
-    }
 
-    .stream{
-        font-size:16px;
-    }
-
-    .auto{
-        font-size:14px;
-    }
-
-    .button{
-        font-size:16px;
-        padding:10px 30px;
-    }
-
-    .FEEDU{
-        font-size:16px;
-        padding:10px 25px;
+    .wrapp{
+        flex-direction: column;
+        text-align: center;
     }
 
     .logou{
         height:80px;
+    }
+
+    .logo2{
+        margin-top:10px;
+    }
+
+    .button{
+        font-size:18px;
+        padding:15px 40px;
+    }
+
+    .FEEDU{
+        font-size:18px;
+        padding:15px 40px;
+    }
+
+    .banner{
+        width:95%;
     }
 
 }
