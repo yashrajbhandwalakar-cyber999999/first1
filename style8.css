@@ -169,7 +169,12 @@ body {
 
 /* ================= MOBILE ONLY ================= */
 /* ================= MOBILE PERFECT LAYOUT ================= */
+/* ================= MOBILE FIX NO SCROLL ================= */
 @media (max-width:768px){
+
+    body{
+        overflow-x: hidden;
+    }
 
     .wrapp{
         flex-direction: column;
@@ -177,62 +182,25 @@ body {
         text-align: center;
     }
 
-    /* Order control for mobile */
-    .logo{
-        order: 1;
-        margin-bottom: 10px;
-    }
-
-    .text{
-        order: 2;
-        font-size: 24px;
-        padding: 10px;
-        line-height: 1.3;
-    }
-
+    /* Gap कमी करा */
     .logo2{
-        order: 3;
-        margin-top: 10px;
+        margin-bottom: 5px;   /* कमी distance */
     }
 
     .banner-wrapper{
-        order: 4;
-        margin-top: 20px;
-    }
-
-    .logou{
-        height: 90px;
-    }
-
-    .logo2 img{
-        width: 120px;
-        height: auto;
-    }
-
-    .stream{
-        font-size: 16px;
-    }
-
-    .auto{
-        font-size: 14px;
-    }
-
-    .button{
-        font-size: 18px;
-        padding: 15px 40px;
-    }
-
-    .FEEDU{
-        font-size: 18px;
-        padding: 15px 40px;
+        margin-top: 5px;   /* A++ खाली लगेच banner */
+        min-height: auto;  /* full height force करू नका */
     }
 
     .banner{
         width: 95%;
+        margin-top: 0;
     }
 
-    .inim{
-        height: 70px;
-        width: 70px;
+    /* Banner image थोडा छोटा करा */
+    .banner-img{
+        max-height: 300px;
+        object-fit: cover;
     }
+
 }
