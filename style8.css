@@ -3,101 +3,81 @@ body {
     margin: 0;
     font-family: 'Georgia', serif;
     background: #eef6fb;
-    overflow: hidden;   /* Scroll completely बंद */
+    overflow-x: hidden;
 }
 
 /* ===== Header Wrapper ===== */
 .wrapp{
     display:flex;
-    flex-direction: row;
-    padding-top: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
     align-items: center;
     justify-content: center;
+    text-align:center;
 }
 
 /* ===== Logo Section ===== */
-.logo{
+.logo, .logo2{
     display: flex;
     flex-direction:column;
-    justify-content: center;
     align-items: center;
+    margin:10px;
 }
 
 .logou{
-    height:125px;
+    height:100px;
 }
 
 /* ===== College Text ===== */
 .text{
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
     color: #970000;
-    font-size: 50px;
-    padding: 0 30px;
+    font-size: 38px;
+    padding: 10px 20px;
     font-weight: 900;
-    text-align: center;
 }
 
 .stream{
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 700;
     color: #38137a;
 }
 
 .auto{
-    color: #3b3b3b;
     display: block;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 600;
+    color: #3b3b3b;
 }
 
-/* ===== NAAC Logo ===== */
-.logo2{
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    height:125px;
-}
-
-/* ===== Banner wrapper (Fit Screen Without Scroll) ===== */
+/* ===== Banner wrapper ===== */
 .banner-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 170px); /* Header height adjust */
+    padding:20px;
 }
 
 /* ===== Banner Box ===== */
 .banner {
     position: relative;
-    width: 750px;
-    max-width: 90%;
+    width: 90%;
+    max-width: 750px;
     border-radius: 25px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0,0,0,0.25);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.banner:hover {
-    transform: translateY(-5px) scale(1.01);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.3);
 }
 
 .banner-img {
     width: 100%;
     height: auto;
-    display: block;
 }
 
 /* ===== Start Button ===== */
 .start-btn {
     position: absolute;
-    bottom: 25px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -106,80 +86,52 @@ body {
     background: linear-gradient(135deg, #0f766e, #0aa885);
     color: #fff;
     border: none;
-    padding: 22px 90px;
-    font-size: 24px;
+    padding: 14px 45px;
+    font-size: 18px;
     font-weight: bold;
     border-radius: 35px;
     cursor: pointer;
-    letter-spacing: 1.2px;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-}
-
-.button:hover {
-    background: linear-gradient(135deg, #0aa885, #0f766e);
-    transform: scale(1.12);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.35);
-}
-
-.btn-text {
-    font-weight: bold;
-    letter-spacing: 1.3px;
 }
 
 /* ===== Feedback Button ===== */
 .FEEDU{
-    background: linear-gradient(135deg,#cfd9df,#e2a9a1);
-    color: #fff;
-    border: none;
-    margin-top: 10px;
-    padding: 20px 80px;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 35px;
-    cursor: pointer;
-    letter-spacing: 1.2px;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-}
-
-.FEEDU:hover {
-    background: linear-gradient(135deg, #e2a9a1, #cfd9df);
-    transform: scale(1.12);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+    margin-top: 15px;
+    padding: 12px 40px;
+    font-size: 18px;
+    border-radius: 30px;
+    text-align:center;
 }
 
 /* ===== Credit ===== */
 .credit {
     position: fixed;
-    bottom: 15px;
-    right: 15px;
-    font-size: 18px;
-    color: #0a3d62;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
     opacity: 0.7;
-    pointer-events: none;
 }
 
 /* ===== Instagram Logo ===== */
 .insta{
     position: fixed;
-    bottom: 15px;
-    right: 1px;
+    bottom: 10px;
+    left: 10px;
 }
 
 .inim{
-    height:100px;
-    width:100px;
+    height:60px;
+    width:60px;
 }
+
+/* ===== Valentine Message ===== */
 .GAME{
     margin-top:15px;
     text-align:center;
 }
 
 .GAME h3{
-    font-size:26px;
+    font-size:20px;
     color:#ff1493;
-    font-weight:bold;
     animation:glow 1.5s infinite alternate;
 }
 
@@ -188,3 +140,33 @@ body {
     to{ text-shadow:0 0 25px #ff1493,0 0 40px pink; }
 }
 
+/* ===== Mobile Responsive ===== */
+@media (max-width:768px){
+
+    .text{
+        font-size:24px;
+    }
+
+    .stream{
+        font-size:16px;
+    }
+
+    .auto{
+        font-size:14px;
+    }
+
+    .button{
+        font-size:16px;
+        padding:10px 30px;
+    }
+
+    .FEEDU{
+        font-size:16px;
+        padding:10px 25px;
+    }
+
+    .logou{
+        height:80px;
+    }
+
+}
