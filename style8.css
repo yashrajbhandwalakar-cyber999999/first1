@@ -168,53 +168,71 @@ body {
 }
 
 /* ================= MOBILE ONLY ================= */
+/* ================= MOBILE PERFECT LAYOUT ================= */
 @media (max-width:768px){
 
     .wrapp{
-        flex-direction: column;  /* only mobile */
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    .logou{
-        height:80px;
-    }
-
-    .logo2 img{
-        width:120px;
-        height:auto;
+    /* Order control for mobile */
+    .logo{
+        order: 1;
+        margin-bottom: 10px;
     }
 
     .text{
-        font-size:24px;
-        padding:10px;
-        line-height:1.2;
+        order: 2;
+        font-size: 24px;
+        padding: 10px;
+        line-height: 1.3;
+    }
+
+    .logo2{
+        order: 3;
+        margin-top: 10px;
+    }
+
+    .banner-wrapper{
+        order: 4;
+        margin-top: 20px;
+    }
+
+    .logou{
+        height: 90px;
+    }
+
+    .logo2 img{
+        width: 120px;
+        height: auto;
     }
 
     .stream{
-        font-size:16px;
+        font-size: 16px;
     }
 
     .auto{
-        font-size:14px;
+        font-size: 14px;
     }
 
     .button{
-        font-size:18px;
-        padding:15px 40px;
+        font-size: 18px;
+        padding: 15px 40px;
     }
 
     .FEEDU{
-        font-size:18px;
-        padding:15px 40px;
+        font-size: 18px;
+        padding: 15px 40px;
     }
 
     .banner{
-        width:95%;
+        width: 95%;
     }
 
     .inim{
-        height:70px;
-        width:70px;
+        height: 70px;
+        width: 70px;
     }
-
 }
