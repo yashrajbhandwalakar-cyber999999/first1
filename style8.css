@@ -3,17 +3,16 @@ body {
     margin: 0;
     font-family: 'Georgia', serif;
     background: #eef6fb;
-    overflow-x: hidden;   /* Only horizontal scroll बंद */
+    overflow-x: hidden;   /* only horizontal scroll बंद */
 }
 
 /* ===== Header Wrapper ===== */
 .wrapp{
     display:flex;
-    flex-direction: row;
+    flex-direction: row;   /* PC वर row same */
     padding-top: 10px;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 /* ===== Logo Section ===== */
@@ -25,7 +24,7 @@ body {
 }
 
 .logou{
-    height:125px;
+    height:125px;   /* PC same */
 }
 
 /* ===== College Text ===== */
@@ -35,14 +34,14 @@ body {
     justify-content: center;
     align-items: center;
     color: #970000;
-    font-size: clamp(24px,4vw,50px);
+    font-size: 50px;   /* PC SAME */
     padding: 0 30px;
     font-weight: 900;
     text-align: center;
 }
 
 .stream{
-    font-size: clamp(16px,3vw,32px);
+    font-size: 32px;
     font-weight: 700;
     color: #38137a;
 }
@@ -50,7 +49,7 @@ body {
 .auto{
     color: #3b3b3b;
     display: block;
-    font-size: clamp(14px,2.5vw,22px);
+    font-size: 22px;
     font-weight: 600;
 }
 
@@ -75,7 +74,7 @@ body {
 /* ===== Banner Box ===== */
 .banner {
     position: relative;
-    width: 750px;
+    width: 750px;  /* PC SAME */
     max-width: 90%;
     border-radius: 25px;
     overflow: hidden;
@@ -123,11 +122,6 @@ body {
     box-shadow: 0 18px 45px rgba(0,0,0,0.35);
 }
 
-.btn-text {
-    font-weight: bold;
-    letter-spacing: 1.3px;
-}
-
 /* ===== Feedback Button ===== */
 .FEEDU{
     background: linear-gradient(135deg,#cfd9df,#e2a9a1);
@@ -165,36 +159,19 @@ body {
 .insta{
     position: fixed;
     bottom: 15px;
-    left: 15px;   /* overlap avoid */
+    left: 15px;
 }
 
 .inim{
-    height:80px;
-    width:80px;
+    height:100px;
+    width:100px;
 }
 
-.GAME{
-    margin-top:15px;
-    text-align:center;
-}
-
-.GAME h3{
-    font-size:26px;
-    color:#ff1493;
-    font-weight:bold;
-    animation:glow 1.5s infinite alternate;
-}
-
-@keyframes glow{
-    from{ text-shadow:0 0 10px #ff69b4; }
-    to{ text-shadow:0 0 25px #ff1493,0 0 40px pink; }
-}
-
-/* ===== Mobile Responsive ===== */
+/* ================= MOBILE ONLY ================= */
 @media (max-width:768px){
 
     .wrapp{
-        flex-direction: column;
+        flex-direction: column;  /* only mobile */
         text-align: center;
     }
 
@@ -202,8 +179,23 @@ body {
         height:80px;
     }
 
-    .logo2{
-        margin-top:10px;
+    .logo2 img{
+        width:120px;
+        height:auto;
+    }
+
+    .text{
+        font-size:24px;
+        padding:10px;
+        line-height:1.2;
+    }
+
+    .stream{
+        font-size:16px;
+    }
+
+    .auto{
+        font-size:14px;
     }
 
     .button{
@@ -218,6 +210,11 @@ body {
 
     .banner{
         width:95%;
+    }
+
+    .inim{
+        height:70px;
+        width:70px;
     }
 
 }
