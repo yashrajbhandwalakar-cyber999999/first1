@@ -1,0 +1,85 @@
+/* Base page */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eef7fb;
+    font-family: "Times New Roman", serif;
+    color: #002244;
+}
+
+/* Header box */
+.tat {
+    width: 100%;
+   background: linear-gradient(135deg, #0f766e, #0aa885);
+    
+   
+    padding: 18px 0;
+    text-align: center;
+}
+
+/* Heading text */
+.tat h3 {
+    margin: 0;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color:white;
+}
+
+/* Default iframe – Laptop */
+iframe {
+    display: block;
+    width: 92%;
+    height: 550px;
+    margin: 25px auto;
+    border: 2px solid #003366;
+    border-radius: 12px;
+    box-shadow: 0 0 14px rgba(0,0,0,0.15);
+}
+
+/* 💻 Laptop / normal screens */
+@media (max-width: 1366px) {
+    .tat h3 {
+        font-size: 20px;
+    }
+
+    iframe {
+        width: 95%;
+        height: 500px;
+    }
+}
+
+/* 📺 TV / Large screens */
+@media (min-width: 1600px) {
+    .tat {
+        padding: 28px 0;
+    }
+
+    .tat h3 {
+        font-size: 32px;
+    }
+
+    iframe {
+        width: 80%;
+        height: 850px;
+        border: 3px solid #0f766e;
+    }
+}
+
+/* 📺 Very large TV (4K type) */
+@media (min-width: 1900px) {
+    iframe {
+        width: 75%;
+        height: 90vh;
+    }
+}
+.credit{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+
+    font-size: 20px;
+    color: #0a3d62;
+    opacity: 0.7;
+
+    pointer-events: none;
+}
