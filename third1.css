@@ -1,0 +1,131 @@
+/* ===== Global ===== */
+* {
+    box-sizing: border-box;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #eef6f8;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+/* ===== Main Container ===== */
+.container {
+    width: 70%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px 40px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* ===== Headings ===== */
+h2 {
+    margin-bottom: 25px;
+    color: #0f766e;
+    font-size: 26px;
+}
+
+/* ===== Forms ===== */
+form {
+    text-align: center;
+}
+
+input[name="v"] {
+    width: 180px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #777;
+    text-align: center;
+}
+
+/* ===== Matrix rows ===== */
+.row {
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+
+/* ===== Matrix Textboxes ===== */
+input[name="m[]"] {
+    width: 32px;
+    height: 32px;
+    margin: 3px;
+    padding: 0;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    transition: 0.2s;
+}
+
+/* Focus effect */
+input[name="m[]"]:focus {
+    border-color: #0f766e;
+    box-shadow: 0 0 5px rgba(15,118,110,0.6);
+    outline: none;
+}
+
+/* ===== Buttons ===== */
+input[type="submit"],
+.btn {
+    margin-top: 25px;
+    padding: 12px 36px;
+    font-size: 16px;
+    border: none;
+    border-radius: 24px;
+    background: #0f766e;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover,
+.btn:hover {
+    background: #0a5c56;
+}
+
+/* ===== Table (Adjacency Matrix Display) ===== */
+table {
+    margin: 25px auto;
+    border-collapse: collapse;
+}
+
+td {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #555;
+    font-size: 16px;
+    text-align: center;
+    background: #f9fefe;
+}
+
+/* ===== Result Section ===== */
+.result {
+    margin-top: 25px;
+    padding: 18px;
+    background: #f0fdfa;
+    border-left: 6px solid #0f766e;
+    text-align: left;
+    font-size: 16px;
+}
+
+.result b {
+    color: #0f766e;
+}
+.credit{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+
+    font-size: 20px;
+    color: #0a3d62;
+    opacity: 0.7;
+
+    pointer-events: none; 
+}
