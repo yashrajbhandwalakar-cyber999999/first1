@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+body{
+    background: #eef7ff;
+}
+
+/* ===== OUTER WRAPPER ===== */
+.all1{
+    width: 100%;
+}
+
+/* ===== FULL BANNER ===== */
+.bann2{
+    width: 100%;
+    height: 100vh;          /* 🔥 FULL SCREEN BANNER */
+    overflow: hidden;
+}
+
+.banu{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* image full, no stretch */
+    display: block;
+}
+
+/* ===== FORM SECTION ===== */
+.int{
+    width: 100%;
+    padding: 30px 0;
+    background: #eef7ff;
+    text-align: center;
+}
+
+/* ===== HEADINGS ===== */
+.int h4{
+    margin: 15px 0;
+    color: #083d77;
+    font-size: 20px;
+}
+
+/* ===== INPUTS (AS-IT-IS MATRIX STYLE) ===== */
+.int input{
+    width: 50px;
+    height: 35px;
+    margin: 4px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 6px;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.int input[type="submit"]{
+    width: 160px;
+    height: 45px;
+    margin-top: 20px;
+    background: #0a7c7b;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.int input[type="submit"]:hover{
+    background: #055c5b;
+}
+.credit{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+
+    font-size: 20px;
+    color: #0a3d62;
+    opacity: 0.7;
+
+    pointer-events: none;
+}
